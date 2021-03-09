@@ -1,7 +1,7 @@
 import pandas as pd 
-data = pd.read_csv('./data.csv')
+data = pd.read_csv('./data.csv') # Leemos la data del csv
 data.head()
-# El dato total te da la frecuencia
+# El dato "total", te da la frecuencia
 total = (data 
   .groupby("¿Usas cubrebocas en los lugares públicos?") # Aqui se tiene que escribir el nombre de la columna
   .agg(frequency=("¿Usas cubrebocas en los lugares públicos?", "count"))) # Y aqui tambien
